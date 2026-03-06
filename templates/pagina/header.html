@@ -1,0 +1,36 @@
+<!-- templates/pagina/header.html -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0d3b66;"> <!-- azul oscuro -->
+  <div class="container d-flex align-items-center">
+    <!-- Logo + Texto -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo Renacer Territorial" 
+           width="50" height="50" class="d-inline-block align-text-top me-3">
+
+      <!-- Texto dividido -->
+      <div class="text-uppercase">
+        <div style="color: #28a745; font-weight: bold; line-height: 1;">RENACER</div>
+        <div style="color: #ffffff; font-weight: bold; line-height: 1;">TERRITORIAL</div> <!-- blanco -->
+      </div>
+    </a>
+
+    <!-- Botón hamburguesa responsive -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú derecha -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold text-white btn btn-primary px-3" 
+             href="{{ url_for('auth.login') }}">LOGIN</a>
+        </li>
+        <li class="nav-item ms-2">
+          <a class="nav-link fw-semibold text-white btn btn-primary px-3" 
+             href="{{ url_for('auth.register') }}">REGISTRAR</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

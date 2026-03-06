@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block info %}
+
+<div class="container mt-5">
+
+    <!-- Bienvenida -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold" style="color:#0d3b66;">RENACER TERRITORIAL</h2>
+
+        <p class="lead">
+            Bienvenido, {{ current_user.fullname }} ({{ current_user.rol }})
+        </p>
+    </div>
+
+
+    <!-- PANEL ADMINISTRADOR -->
+    {% if current_user.rol == 'Administrador' %}
+
+    <div class="text-center mb-4">
+        <h4>Panel de Administración</h4>
+        <p class="text-muted">Gestione propietarios y usuarios del sistema</p>
+    </div>
+
+    <div class="d-grid gap-3 col-md-6 mx-auto">
+
+        <a href="{{ url_for('propietarios.ver_propietarios') }}"
+           class="btn btn-outline-primary btn-lg">
+            Gestión de Propietarios
+        </a>
+
+        <a href="{{ url_for('admin.ver_usuarios') }}"
+           class="btn btn-outline-success btn-lg">
+            Usuarios Registrados
+        </a>
+
+    </div>
+
+    {% endif %}
+
+
+
+    <!-- PANEL PROPIETARIO -->
+    {% if current_user.rol == 'Propietario' %}
+
+    <div class="text-center mb-4">
+        <h4>Servicios para Propietarios</h4>
+
+        <p class="text-muted">
+            Desde aquí puedes registrar solicitudes de reparación o restitución
+        </p>
+    </div>
+
+    <div class="d-grid gap-3 col-md-6 mx-auto">
+
+        <a href="{{ url_for('reparacion.crear_solicitud') }}"
+           class="btn btn-outline-primary btn-lg">
+            Solicitar Reparación de Vivienda
+        </a>
+
+        <a href="{{ url_for('restitucion.crear_solicitud') }}"
+           class="btn btn-outline-success btn-lg">
+            Solicitar Restitución de Tierras
+        </a>
+
+        <a href="{{ url_for('solicitudes.mis_solicitudes') }}"
+           class="btn btn-outline-dark btn-lg">
+            Ver Estado de Mis Solicitudes
+        </a>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,266 @@
+<!-- Hero Section -->
+<section class="hero py-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Imagen Hero -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img src="{{ url_for('static', filename='images/herosection.jpg') }}" 
+             class="img-fluid rounded shadow" 
+             alt="Hero Image">
+      </div>
+
+      <!-- Texto Hero -->
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-3" style="color: #0d3b66;">
+          Bienvenido a Renacer Territorial
+        </h1>
+        <p class="lead mb-4" style="color: #333;">
+          Trabajamos para garantizar los derechos de las víctimas del conflicto armado en Colombia, 
+          ofreciendo soluciones de reparación integral de viviendas y acompañamiento social.
+        </p>
+        <a href="{{ url_for('auth.register') }}" 
+           class="btn btn-primary btn-lg"
+           style="background-color: #0d3b66; border: none;"
+           onmouseover="this.style.backgroundColor='#28a745'"
+           onmouseout="this.style.backgroundColor='#0d3b66'">
+          Inscribirse
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Sección: ¿Cómo te ayudamos? -->
+<section class="py-5" id="servicios" style="background-color: #f8f9fa;">
+  <div class="container">
+
+    <!-- Título -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="color: #0d3b66;">¿Cómo te ayudamos?</h2>
+      <p class="lead text-muted">
+        Servicios que ofrecemos para la reparación integral de víctimas del conflicto
+      </p>
+    </div>
+
+    <!-- Carrusel de tarjetas -->
+    <div id="serviciosCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Tarjeta 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <img src="{{ url_for('static', filename='images/icons/tierras.svg') }}" 
+                         alt="Restitución de Tierras" width="60">
+                  </div>
+                  <h5 class="card-title fw-bold">Restitución de Tierras</h5>
+                  <p class="card-text">Asesoría legal para recuperar tus predios despojados.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <img src="{{ url_for('static', filename='images/icons/vivienda.svg') }}" 
+                         alt="Reparación de Vivienda" width="60">
+                  </div>
+                  <h5 class="card-title fw-bold">Reparación de Vivienda</h5>
+                  <p class="card-text">
+                    Apoyo técnico y económico para reparar viviendas dañadas por el conflicto.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card text-center shadow-sm h-100">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <img src="{{ url_for('static', filename='images/icons/familia.svg') }}" 
+                         alt="Reunificación Familiar" width="60">
+                  </div>
+                  <h5 class="card-title fw-bold">Reunificación Familiar</h5>
+                  <p class="card-text">
+                    Acompañamiento en procesos de reubicación para volver a estar con tu familia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#serviciosCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#serviciosCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- Sección: El Camino al Renacer -->
+<section class="py-5" id="camino" style="background-color: #f8f9fa;">
+  <div class="container">
+
+    <!-- Título -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="color: #0d3b66;">El Camino al Renacer</h2>
+      <p class="lead text-muted">
+        Sigue los pasos para acceder a la reparación y restitución de tus derechos
+      </p>
+    </div>
+
+    <!-- Contenedor de la línea de tiempo -->
+    <div class="timeline-container position-relative p-4 bg-white shadow-sm rounded">
+
+      <!-- Línea vertical central -->
+      <div class="timeline-line position-absolute start-50 translate-middle-x" 
+           style="width:4px; background-color:#0d3b66; top: 25px; bottom: 25px;"></div>
+
+      <!-- Paso 1 (Izquierda) -->
+      <div class="timeline-item row mb-5 align-items-center">
+        <div class="col-5 text-end">
+          <h5 class="fw-bold">Radicación de la solicitud en línea</h5>
+          <p class="text-muted">
+            Envía tu solicitud de reparación o restitución a través de nuestra plataforma en línea.
+          </p>
+        </div>
+        <div class="col-2 d-flex justify-content-center">
+          <div class="timeline-circle bg-success text-white rounded-circle d-flex align-items-center justify-content-center" 
+               style="width:50px; height:50px; font-weight:bold;">1</div>
+        </div>
+        <div class="col-5"></div>
+      </div>
+
+      <!-- Paso 2 (Derecha) -->
+      <div class="timeline-item row mb-5 align-items-center">
+        <div class="col-5"></div>
+        <div class="col-2 d-flex justify-content-center">
+          <div class="timeline-circle bg-success text-white rounded-circle d-flex align-items-center justify-content-center" 
+               style="width:50px; height:50px; font-weight:bold;">2</div>
+        </div>
+        <div class="col-5 text-start">
+          <h5 class="fw-bold">Verificación de documentos y estado de víctima</h5>
+          <p class="text-muted">
+            Revisamos tu documentación y confirmamos tu situación como víctima para continuar el proceso.
+          </p>
+        </div>
+      </div>
+
+      <!-- Paso 3 (Izquierda) -->
+      <div class="timeline-item row mb-5 align-items-center">
+        <div class="col-5 text-end">
+          <h5 class="fw-bold">Visita técnica al predio o vivienda</h5>
+          <p class="text-muted">
+            Realizamos una visita para evaluar los daños y determinar las acciones necesarias.
+          </p>
+        </div>
+        <div class="col-2 d-flex justify-content-center">
+          <div class="timeline-circle bg-success text-white rounded-circle d-flex align-items-center justify-content-center" 
+               style="width:50px; height:50px; font-weight:bold;">3</div>
+        </div>
+        <div class="col-5"></div>
+      </div>
+
+      <!-- Paso 4 (Derecha) -->
+      <div class="timeline-item row align-items-center">
+        <div class="col-5"></div>
+        <div class="col-2 d-flex justify-content-center">
+          <div class="timeline-circle bg-success text-white rounded-circle d-flex align-items-center justify-content-center" 
+               style="width:50px; height:50px; font-weight:bold;">4</div>
+        </div>
+        <div class="col-5 text-start">
+          <h5 class="fw-bold">Ejecución de la medida (Reparación/Restitución)</h5>
+          <p class="text-muted">
+            Se realizan las acciones de reparación o restitución según el caso de la vivienda o predio.
+          </p>
+        </div>
+      </div>
+
+    </div> <!-- Fin contenedor timeline -->
+
+    <!-- Espacio antes del testimonio -->
+    <div class="my-5"></div>
+
+  </div>
+</section>
+
+<!-- Sección: Testimonio Destacado -->
+<section class="py-5 bg-light" id="testimonio">
+  <div class="container">
+
+    <!-- Título -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="color: #0d3b66;">Testimonio Destacado</h2>
+      <p class="lead text-muted">Conexión emocional con quienes hemos ayudado</p>
+    </div>
+
+    <div class="row align-items-center">
+
+      <!-- Imagen de la familia -->
+      <div class="col-md-4 text-center mb-4 mb-md-0">
+        <img src="{{ url_for('static', filename='images/familia.jpg') }}" 
+             alt="Familia beneficiada" class="img-fluid rounded-circle shadow" style="max-width:200px;">
+      </div>
+
+      <!-- Texto del testimonio -->
+      <div class="col-md-8">
+        <blockquote class="blockquote">
+          <p class="fs-4 fst-italic" style="position: relative; padding-left: 2rem;">
+            <span style="font-size:3rem; color:#0d3b66; position:absolute; left:0; top:-0.5rem;">“</span>
+            Creí que nunca volvería a cultivar mi tierra. Gracias a <strong>Renacer Territorial</strong>, hoy mi familia está unida de nuevo.
+          </p>
+          <footer class="blockquote-footer text-end mt-3">María G.</footer>
+        </blockquote>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CSS personalizado -->
+<style>
+  .timeline-container {
+    position: relative;
+  }
+
+  .timeline-line {
+    z-index: 1;
+    height: auto; /* Se adapta al contenido */
+  }
+
+  .timeline-circle {
+    z-index: 2;
+    position: relative;
+  }
+
+  @media (max-width: 768px) {
+    .timeline-item .col-5 {
+      text-align: start !important;
+    }
+  }
+</style>
